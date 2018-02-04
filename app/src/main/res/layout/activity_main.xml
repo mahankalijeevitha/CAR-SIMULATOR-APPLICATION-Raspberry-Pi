@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mahan.finalcar.MainActivity">
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="17dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startstop" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/brake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="105dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="31dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="brake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startstop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carj" />
+
+    <Button
+        android:id="@+id/accelerate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="105dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="accelerate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startstop"
+        app:layout_constraintTop_toBottomOf="@+id/carp" />
+
+    <Button
+        android:id="@+id/startstop"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="15dp"
+        android:background="@android:drawable/presence_invisible"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="start/stop"
+        app:layout_constraintBottom_toBottomOf="@+id/right"
+        app:layout_constraintEnd_toStartOf="@+id/accelerate"
+        app:layout_constraintStart_toEndOf="@+id/brake"
+        app:layout_constraintTop_toTopOf="@+id/accelerate" />
+
+    <TextView
+        android:id="@+id/cartrack"
+        android:layout_width="0dp"
+        android:layout_height="243dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginStart="39dp"
+        android:background="@drawable/road"
+        app:layout_constraintBaseline_toBaselineOf="@+id/carm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/carm"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/car1"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/cartrack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carj"
+        android:layout_width="35dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="144dp"
+        android:layout_marginTop="175dp"
+        android:background="@drawable/car2"
+        app:layout_constraintBottom_toTopOf="@+id/brake"
+        app:layout_constraintStart_toStartOf="@+id/cartrack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/carp"
+        android:layout_width="35dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="83dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginTop="236dp"
+        android:background="@drawable/car3"
+        app:layout_constraintBottom_toTopOf="@+id/accelerate"
+        app:layout_constraintEnd_toEndOf="@+id/cartrack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
